@@ -1,4 +1,8 @@
+# dependencies
 node_modules
+
+# production
+.next
 package-lock.json
 
 .env
