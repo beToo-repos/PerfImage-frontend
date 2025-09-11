@@ -1,10 +1,12 @@
+import { Separator } from '@/components/ui/separator'
 import React from 'react'
 
 const MainRight = () => {
     return (
-        <div className="flex h-full items-center justify-center p-6">
-            <span className="font-semibold">Controls</span>
-        </div>
+        <section className="p-6 h-full bg-gray-50/50">
+            <span className="font-semibold text-sm">Controls</span>
+            <Separator className="my-4" />
+        </section>
     )
 }
 

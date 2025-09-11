@@ -1,9 +1,8 @@
 import { ResizableHandle, ResizablePanel, ResizablePanelGroup } from "@/components/ui/resizable"
-import Signup from "./components/Signup"
-import Pricing from "./components/Pricing"
 import MainLeft from "./Sections/Left/Main"
 import MainRight from "./Sections/Right/Main"
 import { Navigator } from "./components/Navigator"
+import { Navbar } from "./components/Navbar"
 
 export const metadata = {
   title: "PerfImage | Optimize Your Images Effortlessly",
@@ -15,14 +14,8 @@ export const metadata = {
 
 export const page = () => {
     return (<>    
-    <div className="flex h-dvh flex-col">
-        <div className="flex items-center border-b justify-between w-full p-4">
-            <span className="text-lg font-bold">PerfImage</span>
-            <div className="flex items-center gap-4">
-                <Pricing />
-                <Signup />
-            </div>
-        </div>
+    <div className="flex min-h-dvh flex-col">
+        <Navbar />
         <div className="p-6 ">
             <Navigator />
         </div>
