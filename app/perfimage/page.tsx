@@ -2,13 +2,13 @@ import { ResizableHandle, ResizablePanel, ResizablePanelGroup } from "@/componen
 import MainLeft from "./Sections/Left/Main"
 import MainRight from "./Sections/Right/Main"
 import { Navigator } from "./components/Navigator"
-import { Navbar } from "./components/Navbar"
+import { Navbar } from "../components/Navbar"
 
 export const metadata = {
   title: "PerfImage | Optimize Your Images Effortlessly",
   description: "PerfImage helps you optimize and serve images in the most efficient formats, enhancing your website's performance and user experience.",
   keywords: ["compress", "compress jpeg" ,"compress image", "image optimization", "image compressor"],
-  authors: [{ name: "BeToo", url: "https://BeToo.co.in" }],
+  authors: [{ name: "BeToo", url: "https://BeToo.co.in/perfimage" }],
   creator: "BeToo",
 };
 
@@ -33,8 +33,6 @@ export const page = () => {
         </ResizablePanelGroup>
     </div>
     </>
-    
-    
     )
 }
 
