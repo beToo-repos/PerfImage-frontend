@@ -12,7 +12,6 @@ import { Separator } from "@/components/ui/separator";
 import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/hover-card";
 import ProductList from "./components/ProductList";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
-import Image from "next/image";
 
 export default function LandingPage() {
   return (
@@ -41,7 +40,7 @@ export default function LandingPage() {
         </div>
       </nav>
 
-      <div className="container mx-auto px-6 mt-10 lg:px-20">
+      <div className="container mx-auto px-6 mt-10 lg:px-20 xl:py-40">
         <div className="grid lg:grid-cols-2 gap-8 items-center">
           <div>
             <h1 className="text-4xl md:text-6xl font-extrabold leading-tight">
@@ -71,19 +70,17 @@ export default function LandingPage() {
               <Badge className="bg-neutral-100 text-neutral-800 dark:bg-neutral-800 dark:text-neutral-200">Stable</Badge>
             </div>
           </div>
-          <AspectRatio ratio={16 / 9}>
-            <Image 
-              src="https://images.unsplash.com/photo-1498603911539-01ce6c9ad8f5?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+          <AspectRatio className="flex justify-center " ratio={16 / 9}>
+            <img 
+              src="/assets/logo/betoo/BeToo_256x256.png" 
               alt="Image" 
-              className="rounded-md object-cover" 
-              width={800}
-              height={450}
+              className="rounded-md dark:invert" 
               />
           </AspectRatio>
         </div>
       </div>
-      <Separator />
-      <section id="about" className="py-30">
+      <Separator className=" my-10" />
+      <section id="about">
         <Separator className="my-10 mx-auto max-w-xl" />
         <div className="container mx-auto px-6 lg:px-20">
           <h2 className="text-3xl md:text-4xl font-bold text-center">About</h2>

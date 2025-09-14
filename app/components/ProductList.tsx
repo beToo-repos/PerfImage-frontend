@@ -10,7 +10,7 @@ const ProductList = () => {
       fallback: "PI",
       description: "Tool to compress images to lower size, without losing quality.",
       url: "/perfimage",
-      image: "https://github.com/vercel.png"
+      image: "/assets/logo/perfimage/PerfImage_64x64.png"
     },
     {
       name: "QRCode Generator",

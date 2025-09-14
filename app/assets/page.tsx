@@ -7,16 +7,26 @@ import { toast } from "sonner";
 
 export default function AssetsPage() {
 
-  const lightLogos = [
+  const brandLightLogos = [
     { src: "/assets/logo/betoo/BeToo_256x256.png", size: 256 },
     { src: "/assets/logo/betoo/BeToo_128x128.png", size: 128 },
     { src: "/assets/logo/betoo/BeToo_64x64.png", size: 64 },
   ];
 
-  const darkLogos = [
+  const brandDarkLogos = [
     { src: "/assets/logo/betoo/BeToo_dark_256x256.png", size: 256 },
     { src: "/assets/logo/betoo/BeToo_dark_128x128.png", size: 128 },
     { src: "/assets/logo/betoo/BeToo_dark_64x64.png", size: 64 },
+  ];
+  const perfLightLogos = [
+    { src: "/assets/logo/perfimage/PerfImage_256x256.png", size: 256 },
+    { src: "/assets/logo/perfimage/PerfImage_128x128.png", size: 128 },
+    { src: "/assets/logo/perfimage/PerfImage_64x64.png", size: 64 },
+  ];
+  const perfDarkLogos = [
+    { src: "/assets/logo/perfimage/PerfImage_dark_256x256.png", size: 256 },
+    { src: "/assets/logo/perfimage/PerfImage_dark_128x128.png", size: 128 },
+    { src: "/assets/logo/perfimage/PerfImage_dark_64x64.png", size: 64 },
   ];
 
   const handleCopy = (src: string) => {
@@ -28,6 +38,7 @@ export default function AssetsPage() {
 
   const LogoGrid = ({ logos, dark, title }: { logos: { src: string; size: number }[]; dark: boolean; title: string }) => (
     <Card className={`p-6  ${dark ? " bg-gray-950 text-white" : ""}`}>
+      <img src="/assets/bg.jpg" alt="Background" className="fixed blur-xs inset-0 w-full h-full object-cover -z-1 opacity-40" />
       <CardHeader>
         <h2 className="text-2xl font-semibold">
           {title}
@@ -63,17 +74,38 @@ export default function AssetsPage() {
       <Link href="/" className="text-sm text-blue-600 hover:underline">
         &larr; Back to Home
       </Link>
-      <header className="text-center">
+      <header className="text-center backdrop-blur-sm shadow-sm p-3">
         <h1 className="text-4xl font-bold tracking-tight text-neutral-900 dark:text-neutral-50">
           BeToo Assets
         </h1>
         <p className="mt-2 text-lg text-muted-foreground">Logos and Images</p>
       </header>
       <Separator className="my-10 mx-auto w-24" />
-      <div className=" flex justify-center flex-row gap-12 flex-wrap">
-        <LogoGrid logos={lightLogos} dark={false} title="Light Logos" />
-        <LogoGrid logos={darkLogos} dark={true} title="Dark Logos" />
-      </div>
+      <Card className=" bg-white/50 dark:bg-gray-950/50 p-6">
+        <CardHeader>
+          <h2 className="text-2xl font-semibold text-center">
+            Brand Assets
+          </h2>
+        <Separator className="mt-2" />
+        </CardHeader>
+        <div className=" flex justify-center flex-row gap-12 flex-wrap">
+          <LogoGrid logos={brandLightLogos} dark={false} title="Light Logos" />
+          <LogoGrid logos={brandDarkLogos} dark={true} title="Dark Logos" />
+        </div>
+      </Card>
+      <Separator className="my-10 mx-auto w-24" />
+      <Card className=" bg-white/50 dark:bg-gray-950/50 p-6">
+        <CardHeader>
+          <h2 className="text-2xl font-semibold text-center">
+            PerfImage Assets
+          </h2>
+        <Separator className="mt-2" />
+        </CardHeader>
+        <div className=" flex justify-center flex-row gap-12 flex-wrap">
+          <LogoGrid logos={perfLightLogos} dark={false} title="Light Logos" />
+          <LogoGrid logos={perfDarkLogos} dark={true} title="Dark Logos" />
+        </div>
+      </Card>
     </main>
   );
 }
