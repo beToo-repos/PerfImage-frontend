@@ -79,10 +79,9 @@ export default function LandingPage() {
           </AspectRatio>
         </div>
       </div>
-      <Separator className=" my-10" />
+      <Separator className=" mt-10 mx-auto max-w-xl" />
       <section id="about">
-        <Separator className="my-10 mx-auto max-w-xl" />
-        <div className="container mx-auto px-6 lg:px-20">
+        <div className="container mx-auto py-10 px-6 lg:px-20">
           <h2 className="text-3xl md:text-4xl font-bold text-center">About</h2>
           <p className="mt-4 text-center text-neutral-600 dark:text-neutral-300 max-w-2xl mx-auto">
             Focused on a minimal grayscale design language: consistent spacing, clear hierarchy, and high contrast.
@@ -136,7 +135,7 @@ export default function LandingPage() {
         </div>
       </section>
 
-      <section id="product" className="py-20 bg-neutral-100 dark:bg-neutral-800/40">
+      <section id="product" className="py-10 bg-neutral-100 dark:bg-neutral-800/40">
         <div className="container mx-auto px-6 lg:px-20">
           <h2 className="text-3xl md:text-4xl font-bold text-center">Our Products</h2>
           <p className="mt-4 text-center text-neutral-600 dark:text-neutral-300 max-w-2xl mx-auto">
